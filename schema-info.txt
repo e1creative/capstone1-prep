@@ -1,0 +1,28 @@
+Tables
+
+Users (
+    id (PrimaryKey, Autoincrement), 
+    username (Unique), 
+    password
+    email
+    img_url
+    )
+
+    relationship -> movies.user_id
+
+Movies (
+    imdb_id (PrimaryKey),
+    user_id (ForeignKey (Users.id), PrimaryKey),
+    year,
+    poster
+    )
+
+
+Relationship - One to Many
+    One User can have many Movie
+
+
+Deleting -
+    Deleting a User should delete all the users Movies
+
+
